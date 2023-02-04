@@ -1,11 +1,21 @@
 import { React } from 'react';
 
+const images = (path) =>
+	<img
+		src={ path }
+		alt="fs"
+		width="150px"
+		height="150px"
+	/>;
+
 const BrawlerData = (context) => {
 	const { config: { headers }, data: character } = context;
 
 	return headers.map((header, index) =>
 		<td key={ index } className="columnStyle">
-			{character[header]}</td>);
+			{character[header] === character.image
+				? images(character.image)
+				: character[header]}</td>);
 };
 
 const TableBody = (context) => {

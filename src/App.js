@@ -6,8 +6,8 @@ import brawlers from './data/brawlersData';
 
 const getCharacter = () => ({
 	characters: brawlers,
-	sortVal: 0,
-	sortMode: 'LeastTrophies',
+	sortVal: 1,
+	sortMode: 'Least Trophies',
 });
 
 const App = (context) => {

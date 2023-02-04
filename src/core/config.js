@@ -1,6 +1,8 @@
 const config = {
+
 	headers: [
 		'name',
+		'image',
 		'power',
 		'powerCoins',
 		'brawlCoins',
@@ -8,19 +10,19 @@ const config = {
 		'rank',
 		'rarity',
 	],
-	characters: {
+	box: {
 		top: 300,
 		left: 150,
 		height: 200,
 		width: 250,
 	},
 	sorting: [
-		'LeastTrophies',
-		'MostTrophies',
-		'PowerLevel',
-		'ByRarity',
-		'ByRarityDescending',
-		'ClosestNextRank',
+		'Least Trophies',
+		'Most Trophies',
+		'POWER LEVEL',
+		'By Rarity',
+		'By Rarity Descending',
+		'Closest To Next Rank',
 	],
 };
 

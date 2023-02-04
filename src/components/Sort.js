@@ -2,12 +2,14 @@ import { React } from 'react';
 import sortingFunction from '../services/sortingFunction';
 
 const types = {
-	LeastTrophies: (context) => sortingFunction.getLeastTrophies(context),
-	MostTrophies: (context) => sortingFunction.getMostTrophies(context),
-	PowerLevel: (context) => sortingFunction.getPowerLevel(context),
-// 	ByRarity:()=>
-// 	ByRarityDescending:()=>
-// 	ClosestNextRank:()=>
+	'Least Trophies': (context) => sortingFunction.sortByLeastTrophies(context),
+	'Most Trophies': (context) => sortingFunction.sortByMostTrophies(context),
+	'POWER LEVEL': (context) => sortingFunction.sortByPowerLevel(context),
+	'By Rarity': (context) => sortingFunction.sortByRarity(context),
+	'By Rarity Descending': (context) =>
+		sortingFunction.sortByRarityDescending(context),
+	'Closest To Next Rank': (context) =>
+		sortingFunction.sortByClosestNextRank(context),
 };
 
 const Sort = (context) => {
