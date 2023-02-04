@@ -1,4 +1,5 @@
-/* eslint-disable max-len */
+/* eslint-disable no-magic-numbers */
+import { rndBetween } from '@laufire/utils/lib';
 
 const Rarity = {
 	epic: 4,
@@ -13,6 +14,13 @@ const closestRank = {
 	4: 40,
 	5: 50,
 };
+
+const getBrawlStars = ({ config: { brawlStars }}) => ({
+	...brawlStars,
+	power: rndBetween(1, 10),
+	powerCoins: rndBetween(1, 1000),
+	brawlCoins: rndBetween(1, 1000),
+});
 
 const sortByLeastTrophies = ({ state: { characters }}) =>
 	characters.sort((a, b) => a.trophies - b.trophies);
@@ -31,7 +39,8 @@ const sortByRarityDescending = ({ state: { characters }}) =>
 
 const sortByClosestNextRank = ({ state: { characters }}) =>
 	characters.sort((a, b) =>
-		(closestRank[a.rank] - a.trophies) - (closestRank[b.rank] - b.trophies));
+		(closestRank[a.rank] - a.trophies)
+		- (closestRank[b.rank] - b.trophies));
 
 const sortingFunction = {
 	sortByLeastTrophies,
@@ -40,6 +49,7 @@ const sortingFunction = {
 	sortByRarity,
 	sortByRarityDescending,
 	sortByClosestNextRank,
+	getBrawlStars,
 };
 
 export default sortingFunction;

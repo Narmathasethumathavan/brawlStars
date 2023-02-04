@@ -3,8 +3,10 @@ import './App.scss';
 import BrawlersTable from './components/BrawlersTable';
 import Sort from './components/Sort';
 import brawlers from './data/brawlersData';
+import sortingFunction from './services/sortingFunction';
 
-const getCharacter = () => ({
+const getCharacter = (context) => ({
+	currentState: sortingFunction.getBrawlStars(context),
 	characters: brawlers,
 	sortVal: 1,
 	sortMode: 'Least Trophies',
