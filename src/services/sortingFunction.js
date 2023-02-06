@@ -15,12 +15,13 @@ const closestRank = {
 	5: 50,
 };
 
-const getBrawlStars = ({ config: { brawlStars }}) => ({
-	...brawlStars,
-	power: rndBetween(1, 10),
-	powerCoins: rndBetween(1, 1000),
-	brawlCoins: rndBetween(1, 1000),
-});
+const getBrawlStars = ({ config: { brawlStars }}) =>
+	brawlStars.map((brawlStar) => ({
+		...brawlStar,
+		power: rndBetween(1, 10),
+		powerCoins: rndBetween(1, 1000),
+		brawlCoins: rndBetween(1, 1000),
+	}));
 
 const sortByLeastTrophies = ({ state: { characters }}) =>
 	characters.sort((a, b) => a.trophies - b.trophies);

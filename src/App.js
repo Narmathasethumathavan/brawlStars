@@ -1,13 +1,12 @@
 import { React, useState } from 'react';
 import './App.scss';
-import BrawlersTable from './components/BrawlersTable';
+import BrawlStars from './components/BrawlStars';
+import Display from './components/Display';
 import Sort from './components/Sort';
-import brawlers from './data/brawlersData';
 import sortingFunction from './services/sortingFunction';
 
 const getCharacter = (context) => ({
-	currentState: sortingFunction.getBrawlStars(context),
-	characters: brawlers,
+	characters: sortingFunction.getBrawlStars(context),
 	sortVal: 1,
 	sortMode: 'Least Trophies',
 });
@@ -17,7 +16,8 @@ const App = (context) => {
 	const extendedContext = { ...context, state, setState };
 
 	return <div className="App">
-		<BrawlersTable { ...extendedContext }/>
+		<Display { ...extendedContext }/>
+		<BrawlStars { ...extendedContext }/>
 		<Sort { ...extendedContext }/>
 	</div>;
 };

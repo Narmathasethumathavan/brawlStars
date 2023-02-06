@@ -1,4 +1,5 @@
 const config = {
+	size: 1,
 	brawlStars: [
 		{
 			name: 'shelly',
@@ -46,12 +47,7 @@ const config = {
 		'rank',
 		'rarity',
 	],
-	box: {
-		top: 300,
-		left: 150,
-		height: 200,
-		width: 250,
-	},
+
 	sorting: [
 		'Least Trophies',
 		'Most Trophies',

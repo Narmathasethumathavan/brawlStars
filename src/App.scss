@@ -8,9 +8,20 @@
 		left: 1200px;
 	}
 }
-.characters{
+.box{
+	position: absolute;
+	border: 1px solid black;
+	background-color: limegreen;
+}
+.innerBox{
 	position: absolute;
 	border: 3px solid black;
+	background-color: gray;
+}
+.headerBox{
+	position: absolute;
+	border: 3px solid black;
+	background-color:darkgrey;
 }
 .tableStyle {
 	background: lavender;
