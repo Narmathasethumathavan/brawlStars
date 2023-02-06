@@ -2,8 +2,8 @@
 /* eslint-disable no-magic-numbers */
 import { React } from 'react';
 import CharacterRow from './CharacterRow';
-import FooterBoxes from './FooterBoxes';
-import HeaderBox from './HeaderBox';
+import FooterBoxes from './Footer/FooterBoxes';
+import HeaderBox from './Header/HeaderBox';
 const BoxMultiplier = 300;
 const BoxMargin = 200;
 
