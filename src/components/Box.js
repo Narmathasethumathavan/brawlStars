@@ -4,24 +4,14 @@ import { React } from 'react';
 import CharacterRow from './CharacterRow';
 import FooterBoxes from './Footer/FooterBoxes';
 import HeaderBox from './Header/HeaderBox';
-const BoxMultiplier = 300;
-const BoxMargin = 200;
 
 const Box = (context) => {
-	const { data: { character, key }, config: { size }} = context;
+	const { data: { character }} = context;
 	const { name, power, trophies, rank, powerCoins,
 		brawlCoins, image } = character;
 
 	return (
-		<div
-			className="box"
-			style={ {
-				left: ((key * BoxMultiplier) + BoxMargin) * size,
-				top: 100 * size,
-				height: 210 * size,
-				width: 250 * size,
-			} }
-		>
+		<div className="box">
 			<HeaderBox { ...{ ...context, data: { trophies, rank }} }/>
 			<img
 				src={ image }

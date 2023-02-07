@@ -13,9 +13,6 @@ const HeaderBox = (context) => {
 				{
 					display: 'flex',
 					justifyContent: 'space-between',
-					top: -25,
-					height: 20,
-					width: 200,
 				}
 			}
 		>

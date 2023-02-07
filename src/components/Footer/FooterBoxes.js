@@ -12,9 +12,7 @@ const FooterBoxes = (context) => {
 			style={
 				{
 					display: 'flex',
-					justifyContent: 'space-evenly',
-					height: 35,
-					width: 245,
+					justifyContent: 'space-around',
 				}
 			}
 		>
