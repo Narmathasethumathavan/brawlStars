@@ -4,7 +4,7 @@ import BrawlCoins from './BrawlCoins';
 import PowerCoins from './PowerCoins';
 
 const FooterBoxes = (context) => {
-	const { data: { powerCoins, brawlCoins }} = context;
+	const { data: { character: { powerCoins, brawlCoins }}} = context;
 
 	return (
 		<div

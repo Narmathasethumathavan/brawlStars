@@ -1,14 +1,15 @@
 import { React } from 'react';
 
-const CharacterRow = ({ data: { name, power }}) =>
+const CharacterRow = ({ data: { character: { name, power }}}) =>
 	<div
 		style={ {
 			display: 'flex',
 			justifyContent: 'space-between',
 		} }
 	>
-		<span>{name}</span>
-		<span>power  {power}</span>
+		<span className="name">{name}</span>
+		<span className="name">power</span>
+		<span className="power">{power}</span>
 	</div>;
 
 export default CharacterRow;

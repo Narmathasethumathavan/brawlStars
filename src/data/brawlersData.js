@@ -1,7 +1,7 @@
 
 const brawlers = [
 	{
-		name: 'shelly',
+		name: 'Shelly',
 		power: 3,
 		powerCoins: 62,
 		brawlCoins: 91,
@@ -11,7 +11,7 @@ const brawlers = [
 		image: '/images/shelly.png',
 	},
 	{
-		name: 'barley',
+		name: 'Barley',
 		power: 4,
 		powerCoins: 292,
 		brawlCoins: 191,
@@ -22,7 +22,7 @@ const brawlers = [
 
 	},
 	{
-		name: 'bo',
+		name: 'Bo',
 		power: 6,
 		powerCoins: 160,
 		brawlCoins: 213,
@@ -33,7 +33,7 @@ const brawlers = [
 
 	},
 	{
-		name: 'tara',
+		name: 'Tara',
 		power: 7,
 		powerCoins: 120,
 		brawlCoins: 229,
@@ -44,7 +44,7 @@ const brawlers = [
 
 	},
 	{
-		name: 'colt',
+		name: 'Colt',
 		power: 5,
 		powerCoins: 289,
 		brawlCoins: 345,

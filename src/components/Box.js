@@ -4,26 +4,36 @@ import { React } from 'react';
 import CharacterRow from './CharacterRow';
 import FooterBoxes from './Footer/FooterBoxes';
 import HeaderBox from './Header/HeaderBox';
+import Rank from './Rank';
 
 const Box = (context) => {
-	const { data: { character }} = context;
-	const { name, power, trophies, rank, powerCoins,
-		brawlCoins, image } = character;
+	const { data: { character, key }} = context;
+	const { image } = character;
+
+	const leftMargin = (key % 3) * 350 + 300;
+	const topMargin = Math.floor(key / 3) * 350 + 100 ;
 
 	return (
-		<div className="box">
-			<HeaderBox { ...{ ...context, data: { trophies, rank }} }/>
+		<div
+			key={ key }
+			className="box"
+			style={ { left: `${ leftMargin }px`,
+				top: `${ topMargin }px`,
+				height: '200px',
+				width: '250px' } }
+		>
+			<Rank { ...context }/>
+			<HeaderBox { ...context }/>
 			<img
 				src={ image }
 				alt="fs"
 				width="200px"
 				height="150px"
 			/>
-			<CharacterRow { ...{ ...context, data: { name, power }} }/>
-			<FooterBoxes { ...{ ...context,
-				data: { powerCoins, brawlCoins }} }
-			/>
+			<CharacterRow { ...context }/>
+			<FooterBoxes { ...context }/>
 		</div>
+
 	);
 };
 

@@ -7,6 +7,7 @@ const Trophies = ({ data: { trophies }}) =>
 			alt="fs"
 			width="30px"
 			height="20px"
+			borderRadius="50%"
 		/>
 		{trophies}
 	</span>;

@@ -5,7 +5,7 @@ const BrawlStars = (context) => {
 	const { state: { characters }} = context;
 
 	return (
-		<div className="container">
+		<div>
 			{characters.map((character, key) =>
 				<Box
 					key={ key }
