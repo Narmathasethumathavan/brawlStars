@@ -13,6 +13,8 @@ const closestRank = {
 	3: 30,
 	4: 40,
 	5: 50,
+	6: 60,
+	7: 70,
 };
 
 const getBrawlStars = ({ config: { brawlStars }}) =>

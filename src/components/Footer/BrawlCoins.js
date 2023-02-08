@@ -7,8 +7,8 @@ const BrawlCoins = ({ data: { brawlCoins }}) =>
 			style={ { borderRadius: '50%' } }
 			src="/images/brawlCoins.jpeg"
 			alt="fs"
-			width="30px"
-			height="25px"
+			width="35px"
+			height="30px"
 		/>
 		{brawlCoins}
 	</span>;

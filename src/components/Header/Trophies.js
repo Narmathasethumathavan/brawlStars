@@ -1,7 +1,11 @@
+/* eslint-disable no-magic-numbers */
 import { React } from 'react';
 
 const Trophies = ({ data: { trophies }}) =>
-	<span>
+	<span
+		className="bar"
+		style={ { width: `${ trophies * 10 }px` } }
+	>
 		<img
 			src="/images/trophies.jpeg"
 			alt="fs"

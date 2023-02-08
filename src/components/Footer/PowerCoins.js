@@ -6,8 +6,8 @@ const PowerCoins = ({ data: { powerCoins }}) =>
 			style={ { borderRadius: '50%' } }
 			src="/images/powerCoins.jpeg"
 			alt="fs"
-			width="30px"
-			height="25px"
+			width="35px"
+			height="30px"
 		/>
 		{powerCoins}
 	</span>;
