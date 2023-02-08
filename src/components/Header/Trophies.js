@@ -7,11 +7,13 @@ const Trophies = ({ data: { trophies }}) =>
 			justifyContent: 'flex-start',
 			width: `${ trophies }px` } }
 	>
-		<span>{trophies}</span>
+		<span style={ { paddingLeft: '100px',
+			color: 'gold' } }
+		>{trophies}</span>
 		<span>
 			<img
 				className="trophies"
-				src="/images/trophies.jpeg"
+				src="/images/trophy.jpeg"
 				alt="fs"
 				width="30px"
 				height="20px"

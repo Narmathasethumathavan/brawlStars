@@ -1,8 +1,6 @@
 import { React, useState } from 'react';
 import './App.scss';
-import BrawlStars from './components/BrawlStars';
-import Display from './components/Display';
-import Sort from './components/Sort';
+import Screen from './components/Screen';
 import sortingFunction from './services/sortingFunction';
 
 const getCharacter = (context) => ({
@@ -16,9 +14,7 @@ const App = (context) => {
 	const extendedContext = { ...context, state, setState };
 
 	return <div className="App">
-		<Display { ...extendedContext }/>
-		<BrawlStars { ...extendedContext }/>
-		<Sort { ...extendedContext }/>
+		<Screen { ...extendedContext }/>
 	</div>;
 };
 
