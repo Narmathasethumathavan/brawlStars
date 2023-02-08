@@ -1,24 +1,16 @@
 import { React } from 'react';
+import TrophyImg from './TrophyImg';
 
-const Trophies = ({ data: { trophies }}) =>
+const Trophies = ({ data: { character: { trophies }}}) =>
 	<div
 		className="bar"
 		style={ { display: 'flex',
-			justifyContent: 'flex-start',
 			width: `${ trophies }px` } }
 	>
 		<span style={ { paddingLeft: '100px',
 			color: 'gold' } }
 		>{trophies}</span>
-		<span>
-			<img
-				className="trophies"
-				src="/images/trophy.jpeg"
-				alt="fs"
-				width="30px"
-				height="20px"
-			/>
-		</span>
+		<TrophyImg/>
 	</div>;
 
 export default Trophies;

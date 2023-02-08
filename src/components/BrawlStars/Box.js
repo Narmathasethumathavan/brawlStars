@@ -1,7 +1,7 @@
 /* eslint-disable no-magic-numbers */
 import { React } from 'react';
-import CharacterRow from './CharacterRow';
-import FooterBoxes from './Footer/FooterBoxes';
+import CharacterRow from './CharacterRow/CharacterRow';
+import FooterBox from './Footer/FooterBox';
 import HeaderBox from './Header/HeaderBox';
 import Picture from './Picture';
 import Rank from './Rank';
@@ -24,7 +24,7 @@ const Box = (context) => {
 			<HeaderBox { ...context }/>
 			<Picture { ...context }/>
 			<CharacterRow { ...context }/>
-			<FooterBoxes { ...context }/>
+			<FooterBox { ...context }/>
 		</div>
 
 	);

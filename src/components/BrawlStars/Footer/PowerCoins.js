@@ -1,6 +1,6 @@
 import { React } from 'react';
 
-const PowerCoins = ({ data: { powerCoins }}) =>
+const PowerCoins = ({ data: { character: { powerCoins }}}) =>
 	<span>
 		<img
 			style={ { borderRadius: '50%' } }

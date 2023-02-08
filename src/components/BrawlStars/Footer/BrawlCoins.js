@@ -1,6 +1,6 @@
 import { React } from 'react';
 
-const BrawlCoins = ({ data: { brawlCoins }}) =>
+const BrawlCoins = ({ data: { character: { brawlCoins }}}) =>
 	<span>
 		<img
 
