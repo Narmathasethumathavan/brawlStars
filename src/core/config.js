@@ -4,8 +4,8 @@ const config = {
 		{
 			name: 'Shelly',
 			rarity: 'rare',
-			trophies: 33,
-			rank: 3,
+			trophies: 83,
+			rank: 8,
 			image: '/images/shelly.png',
 		},
 		{
@@ -25,15 +25,15 @@ const config = {
 		{
 			name: 'Tara',
 			rarity: 'epic',
-			trophies: 45,
-			rank: 4,
+			trophies: 56,
+			rank: 5,
 			image: '/images/tara.png',
 		},
 		{
 			name: 'Colt',
 			rarity: 'epic',
-			trophies: 22,
-			rank: 2,
+			trophies: 72,
+			rank: 7,
 			image: '/images/colt.png',
 		},
 	],

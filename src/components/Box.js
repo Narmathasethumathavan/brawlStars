@@ -1,21 +1,19 @@
-/* eslint-disable max-lines-per-function */
 /* eslint-disable no-magic-numbers */
 import { React } from 'react';
 import CharacterRow from './CharacterRow';
 import FooterBoxes from './Footer/FooterBoxes';
 import HeaderBox from './Header/HeaderBox';
+import Picture from './Picture';
 import Rank from './Rank';
 
 const Box = (context) => {
-	const { data: { character, key }} = context;
-	const { image } = character;
+	const { data: { key }} = context;
 
 	const leftMargin = (key % 3) * 350 + 300;
 	const topMargin = Math.floor(key / 3) * 350 + 100 ;
 
 	return (
 		<div
-			key={ key }
 			className="box"
 			style={ { left: `${ leftMargin }px`,
 				top: `${ topMargin }px`,
@@ -24,12 +22,7 @@ const Box = (context) => {
 		>
 			<Rank { ...context }/>
 			<HeaderBox { ...context }/>
-			<img
-				src={ image }
-				alt="fs"
-				width="200px"
-				height="150px"
-			/>
+			<Picture { ...context }/>
 			<CharacterRow { ...context }/>
 			<FooterBoxes { ...context }/>
 		</div>
