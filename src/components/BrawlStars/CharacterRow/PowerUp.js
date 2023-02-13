@@ -1,8 +1,8 @@
 import { React } from 'react';
 
-const PowerUpImg = () =>
+const PowerUpImg = ({ state: { powerup }}) =>
 	<img
-		className="powerup"
+		className={ !powerup ? 'powerup' : 'movepowerup' }
 		src="/images/powerup.jpeg"
 		alt="fs"
 		width="30px"

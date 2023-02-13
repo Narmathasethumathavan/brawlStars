@@ -19,6 +19,10 @@ const closestRank = {
 	9: 90,
 };
 
+const getPowerUp = ({ setState }) =>
+	setInterval(() => setState((prevState) => ({ ...prevState,
+		powerup: !prevState.powerup		})), 1000);
+
 const getBrawlStars = ({ config: { brawlStars }}) =>
 	brawlStars.map((brawlStar) => ({
 		...brawlStar,
@@ -55,6 +59,7 @@ const sortingFunction = {
 	sortByRarityDescending,
 	sortByClosestNextRank,
 	getBrawlStars,
+	getPowerUp,
 };
 
 export default sortingFunction;
