@@ -1,20 +1,23 @@
 import { React } from 'react';
-import BrawlCoins from './BrawlCoins';
-import PowerCoins from './PowerCoins';
+import Coins from './Coins';
 
-const FooterBox = (context) =>
-	<div
-		className="innerBox"
-		style={
-			{
-				display: 'flex',
-				justifyContent: 'space-around',
+const FooterBox = (context) => {
+	const { data: { character: { powerCoins, brawlCoins }}} = context;
+
+	return (
+		<div
+			className="innerBox"
+			style={
+				{
+					display: 'flex',
+					justifyContent: 'space-around',
+				}
 			}
-		}
-	>
-		<PowerCoins { ...context }/>
-		<label>+</label>
-		<BrawlCoins { ...context }/>
-	</div>;
+		>
+			<Coins { ...{ ...context, data: powerCoins } }>powerCoins</Coins>
+			<label>+</label>
+			<Coins { ...{ ...context, data: brawlCoins } }>brawlCoins</Coins>
+		</div>);
+};
 
 export default FooterBox;

@@ -11,9 +11,7 @@ const HomeImg = () =>
 	</span>;
 
 const Header = ({ state: { characters }}) =>
-	<div
-		style={ { fontWeight: 'bold', fontSize: 30 } }
-	>
+	<div className="header">
 		<label>Brawlers  </label>
 		{characters.length}/64
 		<HomeImg/>
