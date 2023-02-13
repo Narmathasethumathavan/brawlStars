@@ -1,16 +1,19 @@
 import { React } from 'react';
+import sortingFunction from '../../services/sortingFunction';
 import Box from './Box';
 
 const BrawlStars = (context) => {
-	const { state: { characters }} = context;
+	const charactersWithStyle = sortingFunction.getStyleCharacters(context);
 
 	return (
 		<div>
-			{characters.map((character, key) =>
+			{charactersWithStyle.map((character, key,) =>
 				<Box
 					key={ key }
-					{ ...{ ...context,
-						data: { character, key }} }
+					{ ...{
+						...context,
+						data: { character },
+					} }
 				/>)}
 		</div>);
 };

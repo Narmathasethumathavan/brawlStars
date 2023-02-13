@@ -18,10 +18,24 @@ const closestRank = {
 	8: 80,
 	9: 90,
 };
+const getStyleCharacters = ({ state: { characters }}) =>
+	characters.map((character, key) => {
+		const style = {
+			leftMargin: (key % 3) * 350 + 300,
+			topMargin: Math.floor(key / 3) * 350 + 100,
+		};
+
+		return {
+			...character,
+			style,
+		};
+	});
 
 const getPowerUp = ({ setState }) =>
-	setInterval(() => setState((prevState) => ({ ...prevState,
-		powerup: !prevState.powerup		})), 1000);
+	setInterval(() => setState((prevState) => ({
+		...prevState,
+		powerup: !prevState.powerup,
+	})), 1000);
 
 const getBrawlStars = ({ config: { brawlStars }}) =>
 	brawlStars.map((brawlStar) => ({
@@ -60,6 +74,7 @@ const sortingFunction = {
 	sortByClosestNextRank,
 	getBrawlStars,
 	getPowerUp,
+	getStyleCharacters,
 };
 
 export default sortingFunction;

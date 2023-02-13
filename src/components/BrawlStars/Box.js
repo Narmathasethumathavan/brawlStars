@@ -7,10 +7,7 @@ import Picture from './Picture';
 import Rank from './Rank';
 
 const Box = (context) => {
-	const { data: { key }} = context;
-
-	const leftMargin = (key % 3) * 350 + 300;
-	const topMargin = Math.floor(key / 3) * 350 + 100 ;
+	const { data: { character: { style: { leftMargin, topMargin }}}} = context;
 
 	return (
 		<div
