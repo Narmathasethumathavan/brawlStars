@@ -5,12 +5,7 @@ const CharacterRow = (context) => {
 	const { data: { character: { name, power }}} = context;
 
 	return (
-		<div
-			style={ {
-				display: 'flex',
-				justifyContent: 'space-between',
-			} }
-		>
+		<div className="characterrow">
 			<span className="name">{name}</span>
 			<span className="name" style={ { paddingLeft: '75px' } }>
 				power</span>

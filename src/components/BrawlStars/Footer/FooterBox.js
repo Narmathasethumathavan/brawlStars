@@ -5,15 +5,7 @@ const FooterBox = (context) => {
 	const { data: { character: { powerCoins, brawlCoins }}} = context;
 
 	return (
-		<div
-			className="innerBox"
-			style={
-				{
-					display: 'flex',
-					justifyContent: 'space-around',
-				}
-			}
-		>
+		<div className="innerBox footer">
 			<Coins { ...{ ...context, data: powerCoins } }>powerCoins</Coins>
 			<label>+</label>
 			<Coins { ...{ ...context, data: brawlCoins } }>brawlCoins</Coins>

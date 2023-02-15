@@ -7,9 +7,7 @@ const Trophies = ({ data: { character: { trophies }}}) =>
 		style={ { display: 'flex',
 			width: `${ trophies }px` } }
 	>
-		<span style={ { paddingLeft: '100px',
-			color: 'gold' } }
-		>{trophies}</span>
+		<span className="trophiesno">{trophies}</span>
 		<TrophyImg/>
 	</div>;
 

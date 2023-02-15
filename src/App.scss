@@ -21,6 +21,12 @@
  	// gap: 20px;
  	// row-gap:100px;
 // }
+
+.characterrow{
+	display: flex;
+justify-content:space-between,
+
+}
 .header{
 	font-weight: 'bold';
 	 font-size: 30;
@@ -38,8 +44,12 @@
 	padding-top: 0px;
 }
 .movepowerup{
-	padding-top: 10px;
+	padding-top: 5px;
 	border-radius:70%;
+}
+.trophiesno{
+	padding-left: 100px;
+			color: gold;
 }
 .trophies{
 	border-radius:50%;
@@ -50,6 +60,8 @@
 	position: absolute;
 	top:100px;
 	left:100px;
+	height:200px;
+	width:250px;
 }
 .name{
 	font-size:large;
@@ -74,6 +86,10 @@ color:white;
 	position:absolute;
 	top:-18px;
 	left:-7px;
+}
+.footer{
+	display:flex;
+	justify-content: space-around;
 }
 
 .innerBox {
